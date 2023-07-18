@@ -1,0 +1,1 @@
+This project is demo project written in Python and selenium.
