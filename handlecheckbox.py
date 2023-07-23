@@ -3,6 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 driver = webdriver.Chrome()
 
@@ -23,4 +24,14 @@ for days in days_checkbox:
     days.click()
 print(monday_checkbox.is_selected())
 
-time.sleep(7)
+drop_ele = driver.find_element(By.CSS_SELECTOR,".custom-select")
+Select(drop_ele).select_by_index(3)
+# time.sleep(2)
+Select(drop_ele).select_by_value("8")
+# time.sleep(2)
+Select(drop_ele).select_by_visible_text("Finland")
+all_drop = Select(drop_ele).options
+
+print([option.text for option in all_drop])
+# time.sleep(2)
+
