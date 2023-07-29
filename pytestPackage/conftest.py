@@ -8,10 +8,18 @@ def set_up():
     print(f'\n{"Running method level teardown": ^100}')
 
 
-@pytest.fixture(scope="module")
-def one_time_setup():
+@pytest.fixture(scope="class")
+def one_time_setup(request, browser, osType):
     print(f'\n{"Running conftest demo one time setup": ^100}')
-    yield
+    if browser == "firefox":
+        value = 40
+        print("Running test/s on FF")
+    else:
+        value = 70
+        print("Running test on Chrome")
+    if request.cls is not None:
+        request.cls.value = value
+    yield value
     print(f'{"Running conftest demo one time teardown": ^100}')
 
 
