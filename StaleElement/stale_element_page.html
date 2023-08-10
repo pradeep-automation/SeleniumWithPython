@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stale Element Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul id="item-list">
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+    </ul>
+
+    <button id="refresh-button">Refresh List</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#refresh-button").click(function() {
+                // Simulate an AJAX request to update the item list
+                setTimeout(function() {
+                    $("#item-list").empty();
+                    for (var i = 1; i <= 4; i++) {
+                        $("#item-list").append("<li><a href='#'>Updated Item " + i + "</a></li>");
+                    }
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
