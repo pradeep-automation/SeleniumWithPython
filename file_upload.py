@@ -24,11 +24,8 @@ keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 time.sleep(5)
 
-# driver.execute_script("arguments[0].style.display = 'block';", upload_file_input)  # Make the element visible
-# upload_file_input.send_keys(file_path)
-# driver.execute_script("var event = new Event('change'); arguments[0].dispatchEvent(event);", upload_file_input)
-# # driver.execute_script("arguments[0].value = arguments[1];", upload_file_input, file_path)
-# time.sleep(3)
-
 handles = driver.window_handles
+
+
+
 

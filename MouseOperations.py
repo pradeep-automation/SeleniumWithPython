@@ -31,6 +31,8 @@ time.sleep(3)
 action.move_to_element(driver.find_element(By.XPATH, _admin_tab)).click().perform()
 driver.find_element(By.XPATH, _user_mgt).click()
 action.move_to_element(driver.find_element(By.XPATH, _users)).click().perform()
+# action.context_click(<element>(default is None and will be simple right click))
+
 
 # right click using context_click()
 # action.context_click(driver.find_element(By.XPATH, _user_mgt)).perform()

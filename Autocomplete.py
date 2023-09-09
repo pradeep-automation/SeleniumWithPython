@@ -25,6 +25,9 @@ for item in li_box:
 
 time.sleep(2)
 
+alert = Hand
+
+
 
 import tempfile
 

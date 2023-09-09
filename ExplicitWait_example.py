@@ -12,7 +12,7 @@ wait = WebDriverWait(driver, 5, poll_frequency=2, ignored_exceptions=[])
 driver.find_element(By.XPATH, "//button").click()
 
 try:
-    element = wait.until(EC.visibility_of_element_located((By.ID,"finish")))
+    element = wait.until(EC.visibility_of_element_located((By.ID, "finish")))
     print(f"{element.text} Element shown up")
 except StaleElementReferenceException:
     print("Element not visible")
