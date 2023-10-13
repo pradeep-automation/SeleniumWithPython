@@ -21,8 +21,8 @@ print(driver.current_url)
 
 
 if driver.title == "OrangeHRM" :
-    print("Test case was successful")
-    time.sleep(4)
+    print("Test case was success")
+    time.sleep(3)
 else:
     print("Test case was failed")
     print(driver.title)
