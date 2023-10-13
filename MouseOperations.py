@@ -26,7 +26,6 @@ _users = "//a[text()='Users']"
 
 action = ActionChains(driver)
 time.sleep(3)
-
 # Mouse hover action
 action.move_to_element(driver.find_element(By.XPATH, _admin_tab)).click().perform()
 driver.find_element(By.XPATH, _user_mgt).click()

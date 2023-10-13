@@ -8,8 +8,9 @@ from selenium.webdriver.support.select import Select
 driver = webdriver.Chrome()
 # driver.get("https://the-internet.herokuapp.com/dropdown")
 # driver.maximize_window()
-# element = driver.find_element(By.ID, "dropdown")
-# select_drop = Select(element)
+element = driver.find_element(By.ID, "dropdown")
+select_drop = Select(element)
+
 # select_drop.select_by_value("1")
 # select_drop.select_by_visible_text("Option 2")
 driver.get("https://the-internet.herokuapp.com/drag_and_drop")

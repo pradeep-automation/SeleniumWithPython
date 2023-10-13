@@ -21,16 +21,16 @@ image_elements = WebDriverWait(driver, 10).until(
 # Loop through each image element and check for errors
 for image in image_elements:
     src = image.get_attribute("src")
-    # print(src)
+    print(src)
     # response = driver.execute_script(
     #     "return arguments[0].complete && typeof arguments[0].naturalWidth !== 'undefined'", image
     # )
-    response = requests.get(src)
     # print(response)
+    response = requests.get(src)
 
     if response.status_code != 200:
         print(f"Broken image found: {src}")
-time.sleep(5)
+
 
 # Close the browser
 driver.quit()

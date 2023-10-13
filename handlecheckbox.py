@@ -24,13 +24,16 @@ for days in days_checkbox:
     days.click()
 print(monday_checkbox.is_selected())
 
+
 drop_ele = driver.find_element(By.CSS_SELECTOR,".custom-select")
-Select(drop_ele).select_by_index(3)
+sel_drop_ele = Select(drop_ele)
+sel_drop_ele.select_by_index(3)
 # time.sleep(2)
-Select(drop_ele).select_by_value("8")
+sel_drop_ele.select_by_value("8")
 # time.sleep(2)
-Select(drop_ele).select_by_visible_text("Finland")
-all_drop = Select(drop_ele).options
+
+sel_drop_ele.select_by_visible_text("Finland")
+all_drop = sel_drop_ele.options
 
 print([option.text for option in all_drop])
 # time.sleep(2)

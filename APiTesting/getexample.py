@@ -1,9 +1,9 @@
 import json
 
 import requests
-headers = {
-    "Authorization": f'Token special-key'
-}
+# headers = {
+#     "Authorization": f'Token special-key'
+# }
 resp = requests.get("https://petstore.swagger.io/v2/pet/findPetsByStatus", params={'status':'pending'})
 
 print(resp.json())

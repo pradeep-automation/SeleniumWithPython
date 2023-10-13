@@ -24,7 +24,6 @@ keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 time.sleep(5)
 
-handles = driver.window_handles
 
 
 
