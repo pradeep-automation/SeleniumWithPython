@@ -27,7 +27,7 @@ class JavaScriptExecution:
         location = element.location_once_scrolled_into_view
         # Returns the element into view as well as the location
         # of the element in the page from top left of the corner.
-        # javacript way
+        # javascript way
         driver.execute_script("arguments[0].scrollIntoView(true)", element)
 
 

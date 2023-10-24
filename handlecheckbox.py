@@ -24,7 +24,6 @@ for days in days_checkbox:
     days.click()
 print(monday_checkbox.is_selected())
 
-
 drop_ele = driver.find_element(By.CSS_SELECTOR,".custom-select")
 sel_drop_ele = Select(drop_ele)
 sel_drop_ele.select_by_index(3)

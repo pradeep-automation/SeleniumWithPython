@@ -20,3 +20,7 @@ _locator = "//a[text()='Updated Item 1']"
 print("Element is visible----->",driver.find_element(By.XPATH, _locator).is_displayed())
 time.sleep(3)
 
+
+ele = wait.until(EC.presence_of_all_elements_located((By.ID, "name")))
+
+
