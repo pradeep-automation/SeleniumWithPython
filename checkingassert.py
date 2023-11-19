@@ -16,5 +16,5 @@ class TestClass(TestCase):
 def test_another_example():
     value = 10
     assert value == 10, "Value should be 10"
-    assert value < 20, "Value should be less than 20"
+    assert value > 20, "Value should be less than 20"
     assert value % 2 == 0, "Value should be even"

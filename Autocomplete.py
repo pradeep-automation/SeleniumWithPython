@@ -1,6 +1,7 @@
 import time
 
 from selenium import webdriver
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -11,7 +12,7 @@ driver.maximize_window()
 search_box = WebDriverWait(driver, 10, ignored_exceptions=()).until(
     expected_conditions.visibility_of_element_located((By.NAME, "q")))
 
-search_box.send_keys("Selenium")
+search_box.send_keys("Selenium", Keys.ENTER)
 
 text_to_select = "selenium interview questions"
 
