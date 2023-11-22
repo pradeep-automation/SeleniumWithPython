@@ -1,5 +1,4 @@
 import time
-
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
@@ -9,7 +8,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 driver = webdriver.Edge()
 driver.get("https://www.google.com")
 driver.maximize_window()
-search_box = WebDriverWait(driver, 10, ignored_exceptions=()).until(
+wait = WebDriverWait(driver, 10, poll_frequency=2, ignored_exceptions=())
+search_box = wait.until(
     expected_conditions.visibility_of_element_located((By.NAME, "q")))
 
 search_box.send_keys("Selenium", Keys.ENTER)
