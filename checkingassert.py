@@ -11,7 +11,7 @@ class TestClass(TestCase):
         self.assert_all()
         # assert value == 5, "Value should be 5"
         # assert value < 0, "Value should be greater than 0"
-        # assert value % 2 == 1, "Value should be odd"
+        assert value % 2 == 1, "Value should be odd"
 
 def test_another_example():
     value = 10

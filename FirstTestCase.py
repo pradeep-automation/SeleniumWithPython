@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 # driver = webdriver.Chrome(service=Service("C:\webdrivers\chromedriver.exe"))
 driver = webdriver.Chrome()
 driver.get("https://opensource-demo.orangehrmlive.com/")
-driver.back()
+# driver.back()
 driver.maximize_window()
 driver.implicitly_wait(5)
 # dummy_ele = driver.find_elements(By.TAG_NAME, "a")
@@ -20,17 +20,10 @@ print(driver.current_url)
 # print(driver.page_source)
 
 
-if driver.title == "OrangeHRM" :
+if driver.title == "OrangeHRM":
     print("Test case was success")
     time.sleep(3)
 else:
     print("Test case was failed")
     print(driver.title)
 driver.close()
-
-
-
-
-
-
-

@@ -1,8 +1,8 @@
 import openpyxl
 from selenium import webdriver
 
-file = "C:/Development/robot-scripts/SeleniumWithPython/Data.xlsx"
-workbook = openpyxl.load_workbook(file)
+file = "C:\\Development\\robot-scripts\\SeleniumWithPython\\Data.xlsx"
+workbook = openpyxl.load_workbook("C:\\Development\\robot-scripts\\SeleniumWithPython\\Data.xlsx")
 sheet = workbook["Sheet1"]
 
 rows = sheet.max_row
@@ -14,6 +14,6 @@ print(rows, cols)
 
 for r in range(2, rows+1):
     for c in range(1, cols+1):
-        print(sheet.cell(r,c).value, end= "---------")
+        print(sheet.cell(r, c).value, end= "---------")
     print()
 

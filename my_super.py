@@ -7,7 +7,7 @@ try:
 except(Exception):
     print("I am try")
 else:
-    print("")
+    print("I am else")
 
 finally:
-    print("I am finaly")
+    print("I am finally")

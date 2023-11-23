@@ -12,8 +12,6 @@ driver.get("https://www.selenium.dev/selenium/docs/api/java/index.html?overview-
 
 driver.switch_to.frame(0)
 
-
-
 driver.find_element(By.LINK_TEXT,"org.openqa.selenium").click()
 time.sleep(3)
 driver.switch_to.default_content()

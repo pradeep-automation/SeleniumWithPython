@@ -31,16 +31,21 @@ action.move_to_element(driver.find_element(By.XPATH, _admin_tab)).click().perfor
 driver.find_element(By.XPATH, _user_mgt).click()
 action.move_to_element(driver.find_element(By.XPATH, _users)).click().perform()
 # action.context_click(<element>(default is None and will be simple right click))
-
+action.context_click().perform()
+time.sleep(5)
+from pynput.keyboard import Controller, Key
+keyb = Controller()
+keyb.press(Key.down)
+keyb.release(Key.down)
 
 # right click using context_click()
 # action.context_click(driver.find_element(By.XPATH, _user_mgt)).perform()
 
 # Scroll page down using pixels
-driver.execute_script("window.scrollBy(0, 3000)")
-time.sleep(3)
-loc = driver.execute_script("return window.pageYOffset")
-print(loc)
+# driver.execute_script("window.scrollBy(0, 3000)")
+# time.sleep(3)
+# loc = driver.execute_script("return window.pageYOffset")
+# print(loc)
 
 
 

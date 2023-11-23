@@ -34,6 +34,7 @@ sel_drop_ele.select_by_value("8")
 
 sel_drop_ele.select_by_visible_text("Finland")
 all_drop = sel_drop_ele.options
+is_multiple = sel_drop_ele.is_multiple
 
 print([option.text for option in all_drop])
 # time.sleep(2)

@@ -15,6 +15,8 @@ button.click()
 wait.until(EC.staleness_of(element))
 
 
+
+
 _locator = "//a[text()='Updated Item 1']"
 
 print("Element is visible----->",driver.find_element(By.XPATH, _locator).is_displayed())

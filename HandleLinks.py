@@ -18,8 +18,6 @@ links = driver.find_elements(By.TAG_NAME, 'a')
 total_links = len(links)
 print(total_links)
 
-# for i, link in enumerate(links):
-#     print(f'{i}----->{link.text}')
 count = 0
 for link in links:
     link_url = link.get_attribute("href")

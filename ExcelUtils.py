@@ -26,12 +26,7 @@ def write_data(file, sheetName, rownum, colnum, data):
     sheet = workbook[sheetName]
     sheet.cell(rownum, colnum).value = data
     workbook.save(file)
+    #comment
 
 
-
-
-
-
-
-
-
+print(get_row_count("Data.xlsx", "Sheet1"))

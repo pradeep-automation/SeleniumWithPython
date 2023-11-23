@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 driver = webdriver.Chrome()
 driver.get("https://the-internet.herokuapp.com/dynamic_loading/1")
 driver.maximize_window()
-wait = WebDriverWait(driver, 15, poll_frequency=2, ignored_exceptions=[TimeoutException])
+wait = WebDriverWait(driver, 15, poll_frequency=2, ignored_exceptions=(TimeoutException,))
 # driver.find_element(By.XPATH, "//button").click()
 
 try:
